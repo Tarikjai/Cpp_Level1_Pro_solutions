@@ -1,0 +1,8 @@
+# Ignore Visual Studio temporary files
+.vs/
+*.vscode/
+*.vsidx
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
