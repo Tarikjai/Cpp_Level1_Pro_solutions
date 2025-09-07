@@ -3,18 +3,24 @@
 using namespace std;
 
 
-void PrintName(string Name)
+string ReadName()
 {
-
-	cout << Name;
-
+	string Name;
+	cout << "Please insert your name" << endl;
+	cin >> Name;
+	return Name;
 }
 
-
+void PrintName(string Name)
+{
+	cout << "Your name is:" << Name << endl;
+}
 
 
 int main()
 {
-	string Name;
-	PrintName("Tarik");
+	
+
+	 
+	PrintName(ReadName());
 }
