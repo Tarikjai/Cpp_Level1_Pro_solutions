@@ -41,4 +41,4 @@ void printResult(enNumberType NumberType)
 int main()
 {
 	printResult(checkNumber(readInput()));
-} 
+}
