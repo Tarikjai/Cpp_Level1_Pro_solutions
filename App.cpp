@@ -28,11 +28,11 @@ enNumberType checkNumber(int Num)
 
 void printResult(enNumberType NumberType)
 {
-	if (NumberType == 1)
+	if (NumberType == enNumberType::odd)
 	{
 		cout << "The number is odd " << endl;
 	}
-	if (NumberType == 2)
+	if (NumberType == enNumberType::even)
 	{
 		cout << "The number is even " << endl;
 	}
