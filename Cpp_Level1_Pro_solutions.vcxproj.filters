@@ -27,5 +27,8 @@
     <ClCompile Include="Problem_3.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
+    <ClCompile Include="Problem_4.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
