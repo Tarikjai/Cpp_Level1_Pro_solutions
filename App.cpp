@@ -2,9 +2,41 @@
 #include <string>
 using namespace std;
 
-struct driverInfo {
+struct personInfo {
 	int Age;
-	bool DriverLicence;
+	bool HasDriverLicense;
 };
 
-int 
+
+personInfo readInfo()
+{
+	personInfo Info;
+	cout << "Please type your age: " << endl;
+	cin >> Info.Age;
+	cout << "Type 1 if you have a driver license, 0 if not: " << endl;
+	cin >> Info.HasDriverLicense;
+	return Info;
+}
+
+bool isAccepted(personInfo Info)
+{
+	return (Info.Age > 21 && Info.HasDriverLicense);
+}
+	
+void printResult(personInfo Info)
+{
+	if (isAccepted(Info))
+	{
+		cout << "Hired";
+	}
+	else
+	{
+		cout << "Rejected";
+	}
+}
+
+
+int main()
+{
+	printResult(readInfo());
+}
