@@ -8,51 +8,41 @@ using namespace std;
 using namespace std;
 
 struct personInfo {
-	int Age;
-	bool HasDriverLicense;
-	bool HasRecommendation;
+	string FName;
+	string LName;
 };
-
 
 personInfo readInfo()
 {
-	personInfo Info;
-	cout << "Please type your age: " << endl;
-	cin >> Info.Age;
-	cout << "Type 1 if you have a driver license, 0 if not: " << endl;
-	cin >> Info.HasDriverLicense;
-	cout << "Do you have recommendation? " << endl;
-	cin >> Info.HasRecommendation;
+	personInfo  Info;
+
+	cout << "Your first Name is: " << endl;
+	getline(cin, Info.FName);
+
+	cout << "Your Last Name is: " << endl;
+	getline(cin, Info.LName);
 	return Info;
 }
 
-bool isAccepted(personInfo Info)
+
+string getFullName(personInfo Info, bool Reversed)
 {
-	if (Info.HasRecommendation)
-	{
-		return true;
-	}
+	string FullName = "";
+	if(Reversed)
+		return	FullName =  Info.FName + " " + Info.LName;
 	else
-	{
-		return(Info.Age > 21 && Info.HasDriverLicense);
-	}
-	 
+		return	FullName = Info.LName + " " + Info.FName;
 }
 
-void printResult(personInfo Info)
+
+void printResult(string FullName)
 {
-	if (isAccepted(Info))
-	{
-		cout << "Hired";
-	}
-	else
-	{
-		cout << "Rejected";
-	}
+	cout << "The FullName is: " << FullName;
 }
+
 
 
 int main()
 {
-	printResult(readInfo());
+	printResult(getFullName(readInfo(),false));
 }
