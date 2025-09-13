@@ -36,7 +36,7 @@ bool isAccepted(personInfo Info)
 	{
 		return(Info.Age > 21 && Info.HasDriverLicense);
 	}
-	 
+
 }
 
 void printResult(personInfo Info)
