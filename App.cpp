@@ -2,47 +2,29 @@
 #include <string>
 using namespace std;
 
-
-#include <iostream>
-#include <string>
-using namespace std;
-
-struct personInfo {
-	string FName;
-	string LName;
-};
-
-personInfo readInfo()
+float ReadInput()
 {
-	personInfo  Info;
-
-	cout << "Your first Name is: " << endl;
-	getline(cin, Info.FName);
-
-	cout << "Your Last Name is: " << endl;
-	getline(cin, Info.LName);
-	return Info;
+	int Number;
+	cout << "Please enter a number: " << endl;
+	cin >> Number;
+	return Number;
 }
 
 
-string getFullName(personInfo Info, bool Reversed)
+float divideNumber(float Number)
 {
-	string FullName = "";
-	if(Reversed)
-		return	FullName =  Info.FName + " " + Info.LName;
-	else
-		return	FullName = Info.LName + " " + Info.FName;
+	float result = Number / 2;;
+
+	return result;
 }
 
-
-void printResult(string FullName)
+void printResult(float Number, float result)
 {
-	cout << "The FullName is: " << FullName;
+
+	cout << "Half of " << Number << " is " << result << endl;
 }
-
-
 
 int main()
 {
-	printResult(getFullName(readInfo(),false));
+	printResult(divideNumber(ReadInput()));
 }
