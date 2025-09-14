@@ -42,8 +42,11 @@
     <ClCompile Include="Problem_8.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
+<<<<<<< HEAD
     <ClCompile Include="Problem_9.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
+=======
+>>>>>>> 6a68c0177049c1fd7f28df1075e395391741e6a8
   </ItemGroup>
 </Project>
