@@ -13,14 +13,14 @@ int ReadInput()
 
 float divideNumber(int Number)
 {
-	 return (float)Number / 2;
+	return (float)Number / 2;
 }
 
 void printResult(int Number)
 {
 	string result = "Half of " + to_string(Number) + " is " + to_string(divideNumber(Number));
 	cout << result;
- 
+
 }
 
 int main()
