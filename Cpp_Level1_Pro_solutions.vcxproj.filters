@@ -39,5 +39,8 @@
     <ClCompile Include="Problem_7.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
+    <ClCompile Include="Problem_8.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

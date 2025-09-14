@@ -2,33 +2,32 @@
 #include <string>
 using namespace std;
 
-enum enResult {Pass=1 , Fail=2};
 
-int ReadInput()
+
+void ReadInput(int& Number1, int&  Number2, int&  Number3)
 {
-	int Mark;
-	cout << "Please enter the Mark: " << endl;
-	cin >> Mark;
-	return Mark;
+	cout << "Please enter the Number1: " << endl;
+	cin >> Number1;
+	cout << "Please enter the Number2: " << endl;
+	cin >> Number2;
+	cout << "Please enter the Number3: " << endl;
+	cin >> Number3;
 }
 
-enResult checkResult(int Mark)
+int sumNumbers(int Number1, int Number2, int Number3)
 {
-	if (Mark >= 50)
-		return enResult::Pass;
-	else
-		return enResult::Fail;
+	return Number1 + Number2 + Number3;
 }
 
-void printResult(int Mark)
+void printResult(int total)
 {
-	if (checkResult(Mark) == enResult::Pass)
-		cout << "Pass";
-	else 
-		cout << "Fail";
+	cout << total;	
 }
+
 
 int main()
 {
-	printResult(ReadInput());
+	int Number1, Number2, Number3;
+	ReadInput( Number1,  Number2,  Number3);
+	printResult(sumNumbers(Number1, Number2, Number3));
 }
