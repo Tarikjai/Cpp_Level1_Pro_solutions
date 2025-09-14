@@ -2,25 +2,30 @@
 #include <string>
 using namespace std;
 
+enum enResult {Pass=1 , Fail=2};
+
 int ReadInput()
 {
-	int Number;
-	cout << "Please enter a number: " << endl;
-	cin >> Number;
-	return Number;
+	int Mark;
+	cout << "Please enter the Mark: " << endl;
+	cin >> Mark;
+	return Mark;
 }
 
-
-float divideNumber(int Number)
+enResult checkResult(int Mark)
 {
-	 return (float)Number / 2;
+	if (Mark >= 50)
+		return enResult::Pass;
+	else
+		return enResult::Fail;
 }
 
-void printResult(int Number)
+void printResult(int Mark)
 {
-	string result = "Half of " + to_string(Number) + " is " + to_string(divideNumber(Number));
-	cout << result;
- 
+	if (checkResult(Mark) == enResult::Pass)
+		cout << "Pass";
+	else 
+		cout << "Fail";
 }
 
 int main()
