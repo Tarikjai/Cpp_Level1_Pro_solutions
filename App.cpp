@@ -2,42 +2,33 @@
 #include <string>
 using namespace std;
 
+struct strNumbers {
+	int Num1;
+	int Num2;
+};
 
-
-
-void ReadInput(int& Number1, int&  Number2, int&  Number3)
+strNumbers ReadInput()
 
 {
+	strNumbers Numbers;
 	cout << "Please enter the Number1: " << endl;
-	cin >> Number1;
+	cin >> Numbers.Num1;
 	cout << "Please enter the Number2: " << endl;
-	cin >> Number2;
-	cout << "Please enter the Number3: " << endl;
-	cin >> Number3;
+	cin >> Numbers.Num2;
+	return Numbers;
 }
 
-int sumNumbers(int Number1, int Number2, int Number3)
+
+int checkResult(strNumbers Numbers)
 {
-	return Number1 + Number2 + Number3;
+	if (Numbers.Num1 > Numbers.Num2)
+		return Numbers.Num1;
+	else
+		return Numbers.Num2;
 }
-
-
-float Average(int Number1, int Number2, int Number3)
-{
-	return (float)sumNumbers(Number1, Number2, Number3) / 3;
-}
-
-void printResult(int average)
-{
-	cout << average;
-}
-
 
 int main()
 {
-	int Number1, Number2, Number3;
-
-	ReadInput(Number1, Number2, Number3);
-
-	printResult(Average(Number1, Number2, Number3));
+	ReadInput();
+	
 }
