@@ -26,6 +26,7 @@ int checkResult(strNumbers Numbers)
 	else
 		return Numbers.Num2;
 }
+void prin
 
 int main()
 {
