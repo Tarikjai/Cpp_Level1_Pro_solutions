@@ -2,34 +2,30 @@
 #include <string>
 using namespace std;
 
-struct strNumbers {
-	int Num1;
-	int Num2;
-};
+ 
 
-strNumbers ReadInput()
+void ReadInput(int& Num1, int& Num2)
 
 {
-	strNumbers Numbers;
 	cout << "Please enter the Number1: " << endl;
-	cin >> Numbers.Num1;
+	cin >> Num1;
 	cout << "Please enter the Number2: " << endl;
-	cin >> Numbers.Num2;
-	return Numbers;
+	cin >> Num2;
 }
 
 
-int checkResult(strNumbers Numbers)
+int checkResult(int Num1, int Num2)
 {
-	if (Numbers.Num1 > Numbers.Num2)
-		return Numbers.Num1;
+	if (Num1 > Num2)
+		return Num1;
 	else
-		return Numbers.Num2;
+		return Num2;
 }
-void prin
+ 
 
 int main()
 {
-	ReadInput();
-	
+	int Num1, Num2;
+	ReadInput(Num1,Num2);
+	cout << checkResult(Num1, Num2);
 }
