@@ -11,11 +11,11 @@ float readAB()
 	cin >> r;
 	return r;
 }
-	
+
 
 float CircleArea(float r)
 {
-	float  P = 3.141592653589793238,  Area;
+	float  P = 3.141592653589793238, Area;
 	return Area = P * pow(r, 2);
 }
 
@@ -27,7 +27,7 @@ void printResult(float Area)
 
 int main()
 {
-	 
-	
+
+
 	printResult(CircleArea(readAB()));
 }
