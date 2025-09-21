@@ -15,7 +15,7 @@ void readAB(float& a, float& b)
 float RectangleArea(float a, float b)
 {
 	float Area;
-	return Area = a * b;
+	return Area = a * sqrt(pow(b, 2) - pow(a, 2));;;
 }
 
 
