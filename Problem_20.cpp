@@ -6,17 +6,17 @@ using namespace std;
 
 float readAB()
 {
-	float l;
-	cout << "Please enter L: " << endl;
-	cin >> l;
-	return l;
+	float a;
+	cout << "Please enter A: " << endl;
+	cin >> a;
+	return a;
 }
-	
 
-float CircleArea(float l)
+
+float CircleArea(float a)
 {
-	float  P = 3.141592653589793238,  Area;
-	return Area = pow(l, 2) / (4 * P);
+	float  P = 3.141592653589793238, Area;
+	return Area = (P * pow(a, 2)) / 4;
 }
 
 
@@ -27,7 +27,7 @@ void printResult(float Area)
 
 int main()
 {
-	 
-	
+
+
 	printResult(CircleArea(readAB()));
 }

@@ -1,4 +1,4 @@
 ﻿  App.cpp
 C:\Users\Professional\Documents\C++\Cpp_Level1_Pro_solutions\App.cpp(18,11): warning C4305: 'initializing': truncation from 'double' to 'float'
-C:\Users\Professional\Documents\C++\Cpp_Level1_Pro_solutions\App.cpp(19,18): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Professional\Documents\C++\Cpp_Level1_Pro_solutions\App.cpp(19,26): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
   Cpp_Level1_Pro_solutions.vcxproj -> C:\Users\Professional\Documents\C++\Cpp_Level1_Pro_solutions\x64\Debug\Cpp_Level1_Pro_solutions.exe
