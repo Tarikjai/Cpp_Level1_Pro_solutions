@@ -28,5 +28,5 @@ int main()
 {
 	float a, h;
 	readAB(a, h);
-	printResult(RectangleArea( a,  h));
+	printResult(RectangleArea(a, h));
 }
