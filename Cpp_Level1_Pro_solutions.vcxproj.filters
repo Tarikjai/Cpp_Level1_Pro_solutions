@@ -83,6 +83,18 @@
     <ClCompile Include="Problem_27.cpp">
       <Filter>Pro_Solutions</Filter>
     </ClCompile>
+    <ClCompile Include="Problem_28.cpp">
+      <Filter>Pro_Solutions</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_29.cpp">
+      <Filter>Pro_Solutions</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_30.cpp">
+      <Filter>Pro_Solutions</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_31.cpp">
+      <Filter>Pro_Solutions</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Pro_Solutions">
