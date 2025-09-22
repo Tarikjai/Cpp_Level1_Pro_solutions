@@ -80,6 +80,9 @@
     <ClCompile Include="Problem_26.cpp">
       <Filter>Pro_Solutions</Filter>
     </ClCompile>
+    <ClCompile Include="Problem_27.cpp">
+      <Filter>Pro_Solutions</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Pro_Solutions">

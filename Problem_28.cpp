@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 using namespace std;
- 
+
 
 enum enNumberType { odd = 1, even = 2 };
 
@@ -18,14 +18,14 @@ enNumberType checkOddEven(int input)
 {
 	if (input % 2 == 0)
 		return enNumberType::even;
-	else 
+	else
 		return enNumberType::odd;
 }
 
 
 int ForLoops(int input)
 {
-	int sum =0 ;
+	int sum = 0;
 	for (int i = 1; i <= input; i++)
 		if (checkOddEven(i) == enNumberType::odd)
 		{
@@ -46,7 +46,7 @@ int doWhile(int input)
 		i++;
 	} while (i <= input);
 
-	
+
 	return sum;
 }
 
@@ -68,7 +68,7 @@ int whileLoops(int input)
 int main()
 {
 	int N = readInput();
-	cout << ForLoops(N)<< endl;
+	cout << ForLoops(N) << endl;
 	cout << doWhile(N) << endl;
 	cout << whileLoops(N) << endl;
 }
