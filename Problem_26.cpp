@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 using namespace std;
- 
+
 
 int readInput()
 {
@@ -19,7 +19,7 @@ void ForLoops(int input)
 
 void doWhile(int input)
 {
-	int i=1;
+	int i = 1;
 	do
 	{
 		cout << i << endl;
