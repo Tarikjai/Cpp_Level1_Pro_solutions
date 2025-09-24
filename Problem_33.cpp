@@ -2,10 +2,6 @@
 #include <string>
 using namespace std;
 
-
-
-
-
 int readNumberInRange(int From, int To)
 {
 	int Grade;
@@ -14,11 +10,8 @@ int readNumberInRange(int From, int To)
 		cout << "Please enter your Mark: " << endl;
 		cin >> Grade;
 	} while (Grade <= From || Grade >= To);
-
-
 	return Grade;
 }
-
 
 char output(int Grade)
 {
@@ -37,10 +30,7 @@ char output(int Grade)
 
 }
 
-
 int main()
 {
-
 	cout << output(readNumberInRange(0, 100));
-
 }
