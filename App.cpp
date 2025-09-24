@@ -3,44 +3,50 @@
 using namespace std;
 
 
-
-
-
-int readNumberInRange(int From, int To)
+int readTotalSales()
 {
-	int Grade;
-	do
-	{
-		cout << "Please enter your Mark: " << endl;
-		cin >> Grade;
-	} while (Grade <= From || Grade >= To);
-
-
-	return Grade;
+	int TotalSales;
+	cout << "Enter your TotalSales: " << endl;
+	cin >> TotalSales;
+	return TotalSales;
 }
 
-
-char output(int Grade)
+float GetComissionPercentage(float TotalSales)
 {
-	if (Grade >= 90)
-		return 'A';
-	else if (Grade >= 80)
-		return 'B';
-	else if (Grade >= 70)
-		return 'C';
-	else if (Grade >= 60)
-		return 'D';
-	else if (Grade >= 50)
-		return 'E';
+	if (TotalSales >= 1000000)
+		return 0.01;
+	else if (TotalSales >= 500000)
+		return  0.02;
+	else if (TotalSales >= 100000)
+		return  0.03;
+	else if (TotalSales >= 50000)
+		return  0.05;
 	else
-		return 'F';
+		return 0.00;
 
 }
+
+float printResult(float TotalSales)
+{
+	 
+		return GetComissionPercentage(TotalSales) *  TotalSales  ;
+}
+
 
 
 int main()
 {
+	int  TotalSales = readTotalSales();
 
-	cout << output(readNumberInRange(0, 100));
+	cout << "Percentage is :" << GetComissionPercentage(TotalSales) << endl;
+
+	cout << endl;
+	cout << endl;
+
+	cout << "Comission is :" << printResult(TotalSales) << endl;
+	cout << endl;
+	cout << endl;
+
+
 
 }

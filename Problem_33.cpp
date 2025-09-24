@@ -27,7 +27,6 @@ char output(int Grade)
 		return 'E';
 	else
 		return 'F';
-
 }
 
 int main()
