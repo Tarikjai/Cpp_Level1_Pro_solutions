@@ -4,11 +4,11 @@ using namespace std;
 
 
 struct coin {
-	float pennies;
-	float nickels;
-	float dime;
-	float quarter;
-	float dollars;
+	int pennies;
+    int nickels;
+    int dime;
+    int quarter;
+    int dollars;
 };
 
 coin readPennies()
@@ -33,13 +33,8 @@ coin readPennies()
 }
 
 float calculateTotalPennies(coin coinNumbers) {
-
     return  coinNumbers.pennies + (coinNumbers.nickels * 5) + (coinNumbers.dime * 10) + (coinNumbers.quarter * 25) + (coinNumbers.dollars * 100);
-       
 }
- 
-
-
 
 int main()
 {
