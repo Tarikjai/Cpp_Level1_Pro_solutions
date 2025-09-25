@@ -38,15 +38,9 @@ int main()
 {
 	int  TotalSales = readTotalSales();
 
-	cout << "Percentage is :" << GetComissionPercentage(TotalSales) << endl;
-
-	cout << endl;
-	cout << endl;
-
-	cout << "Comission is :" << printResult(TotalSales) << endl;
-	cout << endl;
-	cout << endl;
-
+	cout << endl << "Percentage is :" << GetComissionPercentage(TotalSales) << endl;
+	cout << endl << "Comission is :" << printResult(TotalSales) << endl;
+	
 
 
 }
