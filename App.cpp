@@ -3,41 +3,49 @@
 using namespace std;
 
 
-int readTotalSales()
+struct coin {
+	float pennies;
+	float nickels;
+	float dime;
+	float quarter;
+	float dollars;
+};
+
+coin readPennies()
 {
-	int TotalSales;
-	cout << "Enter your TotalSales: " << endl;
-	cin >> TotalSales;
-	return TotalSales;
+    coin coinNumbers;
+    cout << "Please enter the number of pennis you have : \n";
+    cin >>  coinNumbers.pennies;
+
+    cout << "Please enter the number of nickels you have : \n";
+    cin >> coinNumbers.nickels;
+
+    cout << "Please enter the number of dime you have : \n";
+    cin >> coinNumbers.dime;
+
+    cout << "Please enter the number of quarter you have : \n";
+    cin >> coinNumbers.quarter;
+
+    cout << "Please enter the number of dollar you have : \n";
+    cin >> coinNumbers.dollars;
+
+    return coinNumbers;
 }
 
-float GetComissionPercentage(float TotalSales)
-{
-	if (TotalSales >= 1000000)
-		return 0.01;
-	else if (TotalSales >= 500000)
-		return  0.02;
-	else if (TotalSales >= 100000)
-		return  0.03;
-	else if (TotalSales >= 50000)
-		return  0.05;
-	else
-		return 0.00;
+float calculateTotalPennies(coin coinNumbers) {
 
+    return  coinNumbers.pennies + (coinNumbers.nickels * 5) + (coinNumbers.dime * 10) + (coinNumbers.quarter * 25) + (coinNumbers.dollars * 100);
+       
 }
-
-float printResult(float TotalSales)
-{
-	return GetComissionPercentage(TotalSales) * TotalSales;
-}
+ 
 
 
 
 int main()
 {
-	int  TotalSales = readTotalSales();
-
-	cout << endl << "Percentage is :" << GetComissionPercentage(TotalSales) << endl;
-	cout << endl << "Comission is :" << printResult(TotalSales) << endl;
+    int totalPennies = calculateTotalPennies(readPennies());
+    
+    cout << endl << totalPennies << " Pennies";
+    cout << endl << float(totalPennies) / 100 << " Dollars";
 
 }
