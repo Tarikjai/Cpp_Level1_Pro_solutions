@@ -2,45 +2,59 @@
 #include <string>
 using namespace std;
 
-
-struct coin {
-	int pennies;
-    int nickels;
-    int dime;
-    int quarter;
-    int dollars;
+struct operation {
+	float Number1 , Number2;
+	char opType;
 };
 
-coin readPennies()
-{
-    coin coinNumbers;
-    cout << "Please enter the number of pennis you have : \n";
-    cin >>  coinNumbers.pennies;
 
-    cout << "Please enter the number of nickels you have : \n";
-    cin >> coinNumbers.nickels;
+operation readNumbers() {
 
-    cout << "Please enter the number of dime you have : \n";
-    cin >> coinNumbers.dime;
+	operation operationNumbers;
 
-    cout << "Please enter the number of quarter you have : \n";
-    cin >> coinNumbers.quarter;
+	cout << "Input Number1: " << endl;
+	cin >> operationNumbers.Number1;
 
-    cout << "Please enter the number of dollar you have : \n";
-    cin >> coinNumbers.dollars;
+	cout << "Input Number2: " << endl;
+	cin >> operationNumbers.Number2;
 
-    return coinNumbers;
+	cout << "Input Operation type: " << endl;
+	cin >> operationNumbers.opType;
+
+	return operationNumbers;
+}
+ 
+
+
+float Operationfunction(operation operationNumbers ) {
+	
+	float result;
+	
+	switch (operationNumbers.opType == '+')
+	     case '+':
+             result = operationNumbers.Number1 + operationNumbers.Number2;
+             break;
+         case '-':
+             result = operationNumbers.Number1 - operationNumbers.Number2;
+             break;
+         case '*':
+             result = operationNumbers.Number1 * operationNumbers.Number2;
+             break;
+         case '/':
+             // Penser à vérifier que y != 0 avant la division
+             if (operationNumbers.y != 0)
+                 result = operationNumbers.x / operationNumbers.y;
+             else
+                 result = 0; // ou une gestion d'erreur adaptée
+             break;
+         default:
+             // éventuelle gestion d'erreur, opérateur inconnu
+             result = 0;
+
 }
 
-float calculateTotalPennies(coin coinNumbers) {
-    return  coinNumbers.pennies + (coinNumbers.nickels * 5) + (coinNumbers.dime * 10) + (coinNumbers.quarter * 25) + (coinNumbers.dollars * 100);
-}
 
 int main()
 {
-    int totalPennies = calculateTotalPennies(readPennies());
-    
-    cout << endl << totalPennies << " Pennies";
-    cout << endl << float(totalPennies) / 100 << " Dollars";
-
+ 
 }
