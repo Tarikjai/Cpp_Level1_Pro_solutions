@@ -2,59 +2,49 @@
 #include <string>
 using namespace std;
 
-struct operation {
-	float Number1 , Number2;
-	char opType;
-};
+enum operationType {   ADD = '+', SUBTRACT = '-', MULTIPLY = '*', DIVIDE = '/' };
 
+float readNumber(string message) {
 
-operation readNumbers() {
-
-	operation operationNumbers;
-
-	cout << "Input Number1: " << endl;
-	cin >> operationNumbers.Number1;
-
-	cout << "Input Number2: " << endl;
-	cin >> operationNumbers.Number2;
-
-	cout << "Input Operation type: " << endl;
-	cin >> operationNumbers.opType;
-
-	return operationNumbers;
+	float number;
+	cout << message << endl;
+	cin >> number;
+	return number;
 }
  
+operationType readOperationType() {
 
-
-float Operationfunction(operation operationNumbers ) {
-	
-	float result;
-	
-	switch (operationNumbers.opType == '+')
-	     case '+':
-             result = operationNumbers.Number1 + operationNumbers.Number2;
-             break;
-         case '-':
-             result = operationNumbers.Number1 - operationNumbers.Number2;
-             break;
-         case '*':
-             result = operationNumbers.Number1 * operationNumbers.Number2;
-             break;
-         case '/':
-             // Penser à vérifier que y != 0 avant la division
-             if (operationNumbers.y != 0)
-                 result = operationNumbers.x / operationNumbers.y;
-             else
-                 result = 0; // ou une gestion d'erreur adaptée
-             break;
-         default:
-             // éventuelle gestion d'erreur, opérateur inconnu
-             result = 0;
-
+	char Optype;
+	cout << "please enter the operation Type :" << endl;
+	cin >> Optype;
+	return (operationType)Optype;
 }
+
+float calculate(float Number1, float Number2, operationType Optype) {
+	switch (Optype) {
+	case operationType::ADD:
+		return Number1 + Number2;
+		break;
+	case operationType::SUBTRACT:
+		return Number1 - Number2;
+		break;
+	case operationType::MULTIPLY:
+		return Number1 * Number2;
+		break;
+	case operationType::DIVIDE:
+		return Number1 / Number2;
+		break;
+	}	
+}
+
 
 
 int main()
 {
- 
+	float Number1 = readNumber("Please insert Number1");
+	float Number2 = readNumber("Please insert Number2");
+	
+	operationType Optype = readOperationType();
+
+	cout << calculate(Number1, Number2, Optype);
 }
