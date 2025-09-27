@@ -1,3 +1,4 @@
 ﻿  App.cpp
-C:\Users\Professional\Documents\C++\Cpp_Level1_Pro_solutions\App.cpp(38,1): warning C4715: 'calculate': not all control paths return a value
+C:\Users\Professional\Documents\C++\Cpp_Level1_Pro_solutions\App.cpp(17,22): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\Professional\Documents\C++\Cpp_Level1_Pro_solutions\App.cpp(26,9): warning C4244: 'return': conversion from 'int' to 'float', possible loss of data
   Cpp_Level1_Pro_solutions.vcxproj -> C:\Users\Professional\Documents\C++\Cpp_Level1_Pro_solutions\x64\Debug\Cpp_Level1_Pro_solutions.exe
