@@ -2,63 +2,22 @@
 #include <string>
 using namespace std;
 
-enum enCheck  { Prime=1, NotPrime=2};
-
-
-int readNumber(string Message) {
-	int Number;
-
-	do {
-		cout << Message << endl;
-		cin >> Number;
-		if (Number <= 0) {
-			cout << "Number must be > 0! " << endl;
-			cout << endl;
-		}
-	} while (Number <= 0);
-
-	return Number;
+float ReadInput(string Message) {
+	float input;
+	cout << Message  << endl;
+	cin >> input;
+	return input;
 }
 
-enCheck CheckNumber(int Number) {
-	
-	int M = round(Number / 2);
-
-	for (int counter = 2; counter <=  M ; counter++)
-	{
-		if (Number % counter == 0)
-			return enCheck::NotPrime;
-	}
-	return enCheck::Prime;
+float CalculateChange(float TotalBill, float Cashpaid) {
+	float result = 0;
+	return result = Cashpaid - TotalBill;
 }
-
-void printResult(int Number) {
-	 
-	if (CheckNumber(Number) == enCheck::Prime)
-		cout << "Prime";
-	else
-		cout << "Not Prime";
-}
-
 
 int main() {
-	printResult(readNumber("Enter a positive Number: "));
+	float TotalBill = ReadInput("Please enter the Total bill: ");
+	float Cashpaid =  ReadInput("Please enter the Total Cashpaid: ");
+
+	cout << CalculateChange(TotalBill, Cashpaid);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
