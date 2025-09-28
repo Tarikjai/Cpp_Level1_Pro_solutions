@@ -2,22 +2,31 @@
 #include <string>
 using namespace std;
 
-float ReadInput(string Message) {
+float ReadBillValue(string Message) {
 	float input;
 	cout << Message  << endl;
 	cin >> input;
 	return input;
 }
 
-float CalculateChange(float TotalBill, float Cashpaid) {
-	float result = 0;
-	return result = Cashpaid - TotalBill;
+float CalculateCharge(float BillValue) {
+	float BillWitchCharges = 0;
+	return BillWitchCharges = BillValue * 1.10;
+}
+
+float CalculateSalesTax(float BillWitchCharges) {
+	float FinalBil;
+	return  FinalBil = BillWitchCharges * 1.16;
+}
+
+void printResult(float FinalBil) {
+	cout << FinalBil;
 }
 
 int main() {
-	float TotalBill = ReadInput("Please enter the Total bill: ");
-	float Cashpaid =  ReadInput("Please enter the Total Cashpaid: ");
-
-	cout << CalculateChange(TotalBill, Cashpaid);
+	float BillValue = ReadBillValue("Please enter the  BillValue : ");
+	
+	printResult(CalculateSalesTax(CalculateCharge(BillValue)));
+	
 }
 
