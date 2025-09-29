@@ -3,10 +3,18 @@
 using namespace std;
 
 float ReadBillValue(string Message) {
-	float input;
-	cout << Message << endl;
-	cin >> input;
-	return input;
+	float Number;
+
+	do {
+		cout << Message << endl;
+		cin >> Number;
+		if (Number <= 0) {
+			cout << "Number must be > 0! " << endl;
+			cout << endl;
+		}
+	} while (Number <= 0);
+
+	return Number;
 }
 
 float CalculateCharge(float BillValue) {

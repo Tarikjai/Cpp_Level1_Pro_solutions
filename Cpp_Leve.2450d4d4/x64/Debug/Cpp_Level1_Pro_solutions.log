@@ -1,4 +1,4 @@
 ﻿  App.cpp
-C:\Users\Professional\Documents\C++\Cpp_Level1_Pro_solutions\App.cpp(14,38): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\Professional\Documents\C++\Cpp_Level1_Pro_solutions\App.cpp(19,38): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Professional\Documents\C++\Cpp_Level1_Pro_solutions\App.cpp(22,38): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Professional\Documents\C++\Cpp_Level1_Pro_solutions\App.cpp(27,38): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
   Cpp_Level1_Pro_solutions.vcxproj -> C:\Users\Professional\Documents\C++\Cpp_Level1_Pro_solutions\x64\Debug\Cpp_Level1_Pro_solutions.exe
