@@ -2,9 +2,8 @@
 #include <string>
 using namespace std;
 
-float ReadBillValue(string Message) {
+float ReadHours(string Message) {
 	float Number;
-
 	do {
 		cout << Message << endl;
 		cin >> Number;
@@ -13,28 +12,33 @@ float ReadBillValue(string Message) {
 			cout << endl;
 		}
 	} while (Number <= 0);
-
 	return Number;
 }
 
-float CalculateCharge(float BillValue) {
-	float BillWitchCharges = 0;
-	return BillWitchCharges = BillValue * 1.10;
-}
 
-float CalculateSalesTax(float BillWitchCharges) {
-	float FinalBil;
-	return  FinalBil = BillWitchCharges * 1.16;
+float calculateDays(float NumberHours) {
+	float days;
+	days = NumberHours / 24;
+	return days;
 }
-
-void printResult(float FinalBil) {
-	cout << FinalBil;
+float calculateWeeks(float days) {
+	float weeks;
+	weeks = days / 7;
+	return weeks;
 }
+ 
 
 int main() {
-	float BillValue = ReadBillValue("Please enter the  BillValue : ");
+	float NumberHours = ReadHours("Please input the number of hours: ");
+
+	float days = calculateDays(NumberHours);
+	float weeks = calculateWeeks(days);
+
+
 	
-	printResult(CalculateSalesTax(CalculateCharge(BillValue)));
-	
+	cout << "weeks: " << weeks;
+	cout <<   endl;
+	cout << "Days: " << days << endl;
+	cout << endl;
 }
 
