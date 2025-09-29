@@ -16,29 +16,34 @@ float ReadHours(string Message) {
 }
 
 
-float calculateDays(float NumberHours) {
-	float days;
-	days = NumberHours / 24;
-	return days;
+float HoursToDays(float NumberHours) {
+	 
+	return float(NumberHours / 24);
+	
 }
-float calculateWeeks(float days) {
-	float weeks;
-	weeks = days / 7;
-	return weeks;
+
+float HoursToWeeks(float NumberHours) {
+	return float(NumberHours / 24 / 7);
+}
+
+float DaysToWeeks(float days) {
+	 ;
+	return   float(days) / 7;
+	 
 }
  
 
 int main() {
 	float NumberHours = ReadHours("Please input the number of hours: ");
 
-	float days = calculateDays(NumberHours);
-	float weeks = calculateWeeks(days);
+	float NumberOfdays = HoursToDays(NumberHours);
+	float NumberOfweeks = DaysToWeeks(NumberOfdays);
 
-
-	
-	cout << "weeks: " << weeks;
+	cout << "Total hours " << NumberHours << endl;
+	cout << endl;
+	cout << "weeks: " << NumberOfweeks << "   "  << HoursToWeeks(NumberHours);
 	cout <<   endl;
-	cout << "Days: " << days << endl;
+	cout << "Days: " << NumberOfdays << endl;
 	cout << endl;
 }
 
