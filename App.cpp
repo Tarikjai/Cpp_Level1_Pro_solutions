@@ -22,17 +22,26 @@ TaskDuration readInput() {
     return Duration;
 }
 
-
 float calculateDaystoSeconds(TaskDuration Duration) {
-  
-    return  float DaystoSeconds = Duration.days * 24 * 60 * 60;
+    return  Duration.days * 24 * 60 * 60;
+}
+
+float calculateHourstoSeconds(TaskDuration Duration) {  
+    return    Duration.hours * 60 * 60;
+}
+float calculateMinutestoSeconds(TaskDuration Duration) {
+    return Duration.minutes *  60;
 }
 
 
 
 int main() {
 	 
-     
+    TaskDuration duration = readInput();
+    float DaystoSeconds = calculateDaystoSeconds(duration);
+    float HourstoSeconds = calculateHourstoSeconds(duration);
+    float MinutestoSeconds = calculateMinutestoSeconds(duration);
 
+    cout << DaystoSeconds + HourstoSeconds + MinutestoSeconds + duration.seconds;
 }
 
