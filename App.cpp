@@ -9,8 +9,16 @@ struct TaskDuration {
     float seconds;
 };
 
+TaskDuration readInput() {
+    TaskDuration Duration;
+    cout << "" << endl;
+    cin >> Duration.days;
+}
+
 
 int main() {
 	 
+
+
 }
 
