@@ -3,45 +3,46 @@
 using namespace std;
 
 struct TaskDuration {
-    float days;
-    float hours;
-    float minutes;
-    float seconds;
+    int days;
+    int hours;
+    int minutes;
+    int seconds;
 };
+
+int validatePositiveNumber(string Message) {
+    int seconds;
+    do {
+        cout << Message << endl;
+        cin >> seconds;
+    } while (seconds <= 0);
+    return seconds;
+}
 
 TaskDuration readInput() {
     TaskDuration Duration;
-    cout << "days" << endl;
-    cin >> Duration.days;
-    cout << "hours" << endl;
-    cin >> Duration.hours;
-    cout << "minutes" << endl;
-    cin >> Duration.minutes;
-    cout << "seconds" << endl;
-    cin >> Duration.seconds;
+
+    Duration.days = validatePositiveNumber("Please enter the number of days");
+    Duration.hours = validatePositiveNumber("Please enter the number of hours");
+    Duration.minutes = validatePositiveNumber("Please enter the number of minutes");
+    Duration.seconds = validatePositiveNumber("Please enter the number of seconds");
     return Duration;
 }
 
-float calculateDaystoSeconds(TaskDuration Duration) {
-    return  Duration.days * 24 * 60 * 60;
+
+
+
+
+
+
+float calculate(TaskDuration Duration) {
+    return  (Duration.days * 24 * 60 * 60) + (Duration.hours * 60 * 60) + (Duration.minutes * 60) + Duration.seconds;
 }
 
-float calculateHourstoSeconds(TaskDuration Duration) {
-    return    Duration.hours * 60 * 60;
-}
-float calculateMinutestoSeconds(TaskDuration Duration) {
-    return Duration.minutes * 60;
-}
 
 
 
 int main() {
 
-    TaskDuration duration = readInput();
-    float DaystoSeconds = calculateDaystoSeconds(duration);
-    float HourstoSeconds = calculateHourstoSeconds(duration);
-    float MinutestoSeconds = calculateMinutestoSeconds(duration);
-
-    cout << DaystoSeconds + HourstoSeconds + MinutestoSeconds + duration.seconds;
+    cout << calculate(readInput());
 }
 
