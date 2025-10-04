@@ -35,7 +35,12 @@ TaskDuration readInput() {
 
 
 float calculate(TaskDuration Duration) {
-    return  (Duration.days * 24 * 60 * 60) + (Duration.hours * 60 * 60) + (Duration.minutes * 60) + Duration.seconds;
+    int TotalDuration;
+    TotalDuration = Duration.days * 24 * 60 * 60;
+    TotalDuration += (Duration.hours * 60 * 60);
+    TotalDuration += (Duration.minutes * 60);
+    TotalDuration += Duration.seconds;
+        return     TotalDuration;
 }
 
 
