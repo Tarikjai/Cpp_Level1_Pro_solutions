@@ -11,38 +11,45 @@ struct TaskDuration {
 
 int validatePositiveNumber(string Message) {
     int seconds;
-        do {
-            cout << Message << endl;
-            cin >> seconds;
-        } while (seconds <= 0);
-        return seconds;
+    do {
+        cout << Message << endl;
+        cin >> seconds;
+    } while (seconds <= 0);
+    return seconds;
 }
 
-TaskDuration readInput() {
+TaskDuration SecondsToTaskDuration(int TotalSeconds) {
     TaskDuration Duration;
 
-    Duration.days = validatePositiveNumber("Please enter the number of days");
-    Duration.hours = validatePositiveNumber("Please enter the number of hours"); 
-    Duration.minutes = validatePositiveNumber("Please enter the number of minutes"); 
-    Duration.seconds = validatePositiveNumber("Please enter the number of seconds");
+    int SecondsPerDay = 60 * 60 * 24;
+    int SecondsPerHour = 60 * 60;
+    int SecondsPerMinute = 60;
+    int Remainder = 0;
+    int totalSeconds = TotalSeconds;
+
+    Duration.days = totalSeconds / SecondsPerDay;
+    Remainder = totalSeconds % SecondsPerDay;
+
+    Duration.hours = Remainder / SecondsPerHour;
+    Remainder = Remainder % SecondsPerHour;
+
+    Duration.minutes = Remainder / SecondsPerMinute;
+    Remainder = Remainder % SecondsPerMinute;
+
+    Duration.seconds = Remainder;
+
     return Duration;
 }
 
 
 
-
-
-
-
-float calculate(TaskDuration Duration) {
-    return  (Duration.days * 24 * 60 * 60) + (Duration.hours * 60 * 60) +(Duration.minutes * 60) + Duration.seconds;
+void printResult(TaskDuration Duration) {
+    cout << Duration.days << ":" << Duration.hours << ":" << Duration.minutes << ":" << Duration.seconds << endl;
 }
-
- 
 
 
 int main() {
-	 
-    cout << calculate(readInput());
-}
 
+    int TotalSeconds = validatePositiveNumber("Please enter the number of seconds ");
+    printResult(SecondsToTaskDuration(TotalSeconds));
+}
