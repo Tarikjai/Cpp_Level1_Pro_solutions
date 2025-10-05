@@ -12,34 +12,43 @@ enum  enWeekDay {
     Saturday = 7
 };
 
-int readNumber(string Message) {
+int readNumber(string Message, int From, int To) {
     int day;
     do {
         cout << Message << endl;
         cin >> day;
-    } while (day <= 0 || day >= 8);
+    } while (day < From || day > To);
     return day;
 }
 
-enWeekDay checkDay(int day)
+enWeekDay checkDay()
 {
-
-    switch (day) {
-    case 1 :
-        return enWeekDay::Sunday;
-        break;
+    return (enWeekDay) readNumber("Please enter the day Number Sunday = 1,  Monday = 2, Tuesday = 3, Wednesday = 4, Thursday = 5, Friday = 6, Saturday = 7", 1, 7);
    
-    }
-  
 }
 
-void printResult(int day) {
-    if(checkDay(day) == enWeekDay::Sunday)
-        cout << "Sunday" << endl;
+string  printResult(enWeekDay day) {
+
+    switch (day) {
+    case enWeekDay::Sunday:
+        return "Sunday";
+    case enWeekDay::Monday:
+        return "Monday";
+    case enWeekDay::Tuesday:
+        return "Tuesday";
+    case enWeekDay::Wednesday:
+        return "Wensday";
+    case enWeekDay::Thursday:
+        return "Thursday";
+    case enWeekDay::Friday:
+        return "Friday";
+    case enWeekDay::Saturday:
+        return "Saturday";
+
+    }
 }
 
  
 int main() {
-    int day = readNumber("Please enter the day Number");
-    printResult(day);
+   printResult(checkDay());
 }
