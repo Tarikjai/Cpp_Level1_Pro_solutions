@@ -13,9 +13,9 @@ float ReadPositiveNumber(string Message) {
 
 }
 
-float TotalMonths(float LoanAmount, float MonthlyPayment) {
+float TotalMonths(float LoanAmount, float MonthsNeeded) {
  
-	return LoanAmount / MonthlyPayment;
+	return LoanAmount / MonthsNeeded;
 }
 
 
@@ -23,7 +23,7 @@ float TotalMonths(float LoanAmount, float MonthlyPayment) {
 int main() {
 
 	float LoanAmount  = ReadPositiveNumber("please insert your Loan Amount");
-	float MonthlyPayment = ReadPositiveNumber("please insert your Monthly Payment");
+	float MonthsNeeded = ReadPositiveNumber("please insert the Months number");
 
-	cout << TotalMonths( LoanAmount,  MonthlyPayment) << " Months" << endl;
+	cout << TotalMonths( LoanAmount, MonthsNeeded) << " £" << endl;
 }
