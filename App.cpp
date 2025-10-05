@@ -2,54 +2,44 @@
 #include <string>
 using namespace std;
 
-struct TaskDuration {
-    int days;
-    int hours;
-    int minutes;
-    int seconds;
+enum  enWeekDay {
+    Sunday = 1,
+    Monday = 2,
+    Tuesday = 3,
+    Wednesday = 4,
+    Thursday = 5,
+    Friday = 6,
+    Saturday = 7
 };
 
-int validatePositiveNumber(string Message) {
-    int seconds;
+int readNumber(string Message) {
+    int day;
     do {
         cout << Message << endl;
-        cin >> seconds;
-    } while (seconds <= 0);
-    return seconds;
+        cin >> day;
+    } while (day <= 0 || day >= 8);
+    return day;
 }
 
-TaskDuration SecondsToTaskDuration(int TotalSeconds) {
-    TaskDuration Duration;
+enWeekDay checkDay(int day)
+{
 
-    int SecondsPerDay = 60 * 60 * 24;
-    int SecondsPerHour = 60 * 60;
-    int SecondsPerMinute = 60;
-    int Remainder = 0;
-    int totalSeconds = TotalSeconds;
-
-    Duration.days = totalSeconds / SecondsPerDay;
-    Remainder = totalSeconds % SecondsPerDay;
-
-    Duration.hours = Remainder / SecondsPerHour;
-    Remainder = Remainder % SecondsPerHour;
-
-    Duration.minutes = Remainder / SecondsPerMinute;
-    Remainder = Remainder % SecondsPerMinute;
-
-    Duration.seconds = Remainder;
-
-    return Duration;
+    switch (day) {
+    case 1 :
+        return enWeekDay::Sunday;
+        break;
+   
+    }
+  
 }
 
-
-
-void printResult(TaskDuration Duration) {
-    cout << Duration.days << ":" << Duration.hours << ":" << Duration.minutes << ":" << Duration.seconds << endl;
+void printResult(int day) {
+    if(checkDay(day) == enWeekDay::Sunday)
+        cout << "Sunday" << endl;
 }
 
-
+ 
 int main() {
-
-    int TotalSeconds = validatePositiveNumber("Please enter the number of seconds ");
-    printResult(SecondsToTaskDuration(TotalSeconds));
+    int day = readNumber("Please enter the day Number");
+    printResult(day);
 }
