@@ -2,17 +2,28 @@
 #include <string>
 using namespace std;
 
-void printAllLeters() {
+float ReadPositiveNumber(string Message) {
+	float PositiveNumber;
+	do {
+		cout << Message << endl;
+		cin >> PositiveNumber;
+	}  while (PositiveNumber <= 0);
 
-	for (int i = 65; i <= 90; i++) {
-		cout << char(i) << endl;
-		
-	}
+	return PositiveNumber;
 
 }
+
+float TotalMonths(float LoanAmount, float MonthlyPayment) {
+ 
+	return LoanAmount / MonthlyPayment;
+}
+
 
 
 int main() {
 
-	printAllLeters();
+	float LoanAmount  = ReadPositiveNumber("please insert your Loan Amount");
+	float MonthlyPayment = ReadPositiveNumber("please insert your Monthly Payment");
+
+	cout << TotalMonths( LoanAmount,  MonthlyPayment) << " Months" << endl;
 }
