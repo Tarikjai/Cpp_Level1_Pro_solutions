@@ -1,4 +1,2 @@
 ﻿  App.cpp
-C:\Users\Professional\Documents\C++\Cpp_Level1_Pro_solutions\App.cpp(54,5): warning C4060: switch statement contains no 'case' or 'default' labels
-C:\Users\Professional\Documents\C++\Cpp_Level1_Pro_solutions\App.cpp(56,1): warning C4715: 'checkDay': not all control paths return a value
   Cpp_Level1_Pro_solutions.vcxproj -> C:\Users\Professional\Documents\C++\Cpp_Level1_Pro_solutions\x64\Debug\Cpp_Level1_Pro_solutions.exe

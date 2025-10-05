@@ -24,7 +24,6 @@ int readNumber(string Message, int From, int To) {
 enWeekDay checkDay()
 {
     return (enWeekDay) readNumber("Please enter the day Number Sunday = 1,  Monday = 2, Tuesday = 3, Wednesday = 4, Thursday = 5, Friday = 6, Saturday = 7", 1, 7);
-   
 }
 
 string  printResult(enWeekDay day) {
@@ -44,11 +43,12 @@ string  printResult(enWeekDay day) {
         return "Friday";
     case enWeekDay::Saturday:
         return "Saturday";
-
+    default:
+            return "Not a valid day";
     }
 }
 
  
 int main() {
-   printResult(checkDay());
+   cout << printResult(checkDay());
 }
