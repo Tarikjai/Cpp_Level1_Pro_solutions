@@ -3,26 +3,26 @@
 using namespace std;
 
 
-enum enMonths { Janvier=1, Fevrier=2, Mars=3, Avril=4, Mai=5, Juin=6, Juillet=7, Aout=8 , Septembre=9, Octobre=10, Novembre=11, Decembre=12 };
+enum enMonths { Janvier = 1, Fevrier = 2, Mars = 3, Avril = 4, Mai = 5, Juin = 6, Juillet = 7, Aout = 8, Septembre = 9, Octobre = 10, Novembre = 11, Decembre = 12 };
 
 int ReadNumber(string Message, int From, int To) {
-	int Number;
-	do{
-		cout << Message << endl;
-		cin >> Number;
-	} while (Number < From || Number >To);
+    int Number;
+    do {
+        cout << Message << endl;
+        cin >> Number;
+    } while (Number < From || Number >To);
     return Number;
 }
 
 enMonths CheckMonth() {
-	return (enMonths)ReadNumber("Janvier=1, Fevrier=2, Mars=3, Avril=4, Mai=5, Juin=6, Juillet=7, Aout=8 , Septembre=9, Octobre=10, Novembre=11, Decembre=12", 1, 12);
+    return (enMonths)ReadNumber("Janvier=1, Fevrier=2, Mars=3, Avril=4, Mai=5, Juin=6, Juillet=7, Aout=8 , Septembre=9, Octobre=10, Novembre=11, Decembre=12", 1, 12);
 }
 
 string printResult(enMonths Month) {
-	
-	switch(Month) {
-	case enMonths::Janvier:
-		return "Janvier";
+
+    switch (Month) {
+    case enMonths::Janvier:
+        return "Janvier";
     case enMonths::Fevrier:
         return "Février";
     case enMonths::Mars:
@@ -47,10 +47,10 @@ string printResult(enMonths Month) {
         return "Décembre";
     default:
         return "Mois invalide";
-	}
+    }
 }
 
 int main() {
 
-   cout << printResult(CheckMonth());
+    cout << printResult(CheckMonth());
 }
