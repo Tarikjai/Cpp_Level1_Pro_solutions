@@ -2,28 +2,44 @@
 #include <string>
 using namespace std;
 
-float ReadPositiveNumber(string Message) {
-	float PositiveNumber;
+string ReadPin() {
+	string PIN;
+	cout << "Insert Your PIN" << endl;
+	cin >> PIN;
+	return PIN;
+}
+
+bool Login() {
+	string PIN;
+	int counter = 3;
+
 	do {
-		cout << Message << endl;
-		cin >> PositiveNumber;
-	}  while (PositiveNumber <= 0);
+		counter--;
+		PIN = ReadPin();
+		if (PIN == "1234")
+		{
+			return 1;
+		}
+		else {
+			system("color 4F");
+			cout << "Wrong PIN, you have "<< counter << " more tries" << endl;
+			cout << endl;
+		 
+		}
 
-	return PositiveNumber;
-
+	} while (counter >= 1 && PIN != "1234");
+	return 0;
 }
-
-float TotalMonths(float LoanAmount, float MonthsNeeded) {
- 
-	return LoanAmount / MonthsNeeded;
-}
-
-
 
 int main() {
 
-	float LoanAmount  = ReadPositiveNumber("please insert your Loan Amount");
-	float MonthsNeeded = ReadPositiveNumber("please insert the Months number");
+	if (Login()) {
+		system("color 2F");
+		cout << "Your Balance is: 7500" << endl;
+	}
+	else {
+		cout << "Card is locked" << endl;
+	}
 
-	cout << TotalMonths( LoanAmount, MonthsNeeded) << " £" << endl;
+
 }
