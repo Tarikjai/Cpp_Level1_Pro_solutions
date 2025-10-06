@@ -157,5 +157,8 @@
     <Filter Include="Pro_Solutions">
       <UniqueIdentifier>{4083f6a6-3797-44f7-9fb9-3967e7da33ab}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Pro_Confirmation">
+      <UniqueIdentifier>{a8fe34ed-86b7-47fc-9e86-975b8e635d09}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
 </Project>
