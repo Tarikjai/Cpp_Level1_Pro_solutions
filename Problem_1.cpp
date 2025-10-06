@@ -5,9 +5,7 @@ using namespace std;
 
 void PrintName(string Name)
 {
-
 	cout << Name << endl;
-
 }
 
 
