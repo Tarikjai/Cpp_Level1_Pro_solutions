@@ -152,6 +152,9 @@
     <ClCompile Include="Problem_50.cpp">
       <Filter>Pro_Solutions</Filter>
     </ClCompile>
+    <ClCompile Include="Problem_02.cpp">
+      <Filter>Pro_Confirmation</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Pro_Solutions">
@@ -160,5 +163,10 @@
     <Filter Include="Pro_Confirmation">
       <UniqueIdentifier>{a8fe34ed-86b7-47fc-9e86-975b8e635d09}</UniqueIdentifier>
     </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Problem_01.cpp">
+      <Filter>Pro_Confirmation</Filter>
+    </None>
   </ItemGroup>
 </Project>
