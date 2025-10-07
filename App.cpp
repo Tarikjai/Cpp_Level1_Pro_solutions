@@ -2,24 +2,37 @@
 #include <string>
 using namespace std;
 
+enum CheckOddEven { odd = 1, even = 0 };
 
-
-
-string ReadName() {
-	string Name;
-	cout << "Please enter your Name:" << endl;
-	cin >> Name;
-	return Name;
+int readNumber() {
+	int Number;
+	do {
+		cout << "Please enter a positive number: " << endl;
+		cin >> Number;
+	} while (Number <= 0);
+	return Number;
 }
 
-void printName(string Name) {
-	cout << "Your name is:" << Name << endl ;
+
+CheckOddEven checkNumber(int Number) {
+
+	if (Number % 2 != 0)
+		return CheckOddEven::odd;
+	else
+		return CheckOddEven::even;
 }
 
+void printResult(CheckOddEven check) {
+	  
+	if (check == CheckOddEven::odd)
+		cout << "Odd";
+	else
+		cout << "Even";
+}
 
 
 int main() {
-	
-	printName(ReadName());
+	int Number = readNumber();
+	printResult(checkNumber(Number));
 
 }
