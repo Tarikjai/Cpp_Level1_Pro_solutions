@@ -32,7 +32,7 @@ void printResult(personInfo Info)
 {
 	if (isAccepted(Info))
 	{
-		cout << "Hired";
+		cout << "Hired"; 
 	}
 	else
 	{
