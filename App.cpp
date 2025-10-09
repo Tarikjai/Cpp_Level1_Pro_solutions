@@ -2,37 +2,36 @@
 #include <string>
 using namespace std;
 
-enum CheckOddEven { odd = 1, even = 0 };
+struct strInfoPerson {
+	int Age;
+	bool HasDriverLicense;
+};
 
-int readNumber() {
-	int Number;
-	do {
-		cout << "Please enter a positive number: " << endl;
-		cin >> Number;
-	} while (Number <= 0);
-	return Number;
+strInfoPerson ReadInfo() {
+	strInfoPerson InfoPerson;
+	cout << "Please insert your Age: ";
+	cin >> InfoPerson.Age;
+	cout << "Do you have a driver License (1 or 0) ?  ";
+	cin >> InfoPerson.HasDriverLicense;
+	return InfoPerson;
 }
 
+bool CheckResult(strInfoPerson InfoPerson) {
+	return  bool(InfoPerson.Age >=21 && InfoPerson.HasDriverLicense);
+}
 
-CheckOddEven checkNumber(int Number) {
-
-	if (Number % 2 != 0)
-		return CheckOddEven::odd;
+void PrintResult(strInfoPerson InfoPerson) {
+	if (CheckResult(InfoPerson) == 1)
+		cout << "Accepted";
 	else
-		return CheckOddEven::even;
+		cout << "Rejected";
 }
 
-void printResult(CheckOddEven check) {
-	  
-	if (check == CheckOddEven::odd)
-		cout << "Odd";
-	else
-		cout << "Even";
-}
+
+
 
 
 int main() {
-	int Number = readNumber();
-	printResult(checkNumber(Number));
-
+	
+	PrintResult(ReadInfo());
 }

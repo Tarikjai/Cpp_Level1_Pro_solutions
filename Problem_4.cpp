@@ -40,7 +40,6 @@ void printResult(personInfo Info)
 	}
 }
 
-
 int main()
 {
 	printResult(readInfo());
