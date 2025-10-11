@@ -3,35 +3,37 @@
 using namespace std;
 
 struct strInfoPerson {
-	int Age;
-	bool HasDriverLicense;
+	string FirstName;
+	string LastName;
 };
 
-strInfoPerson ReadInfo() {
-	strInfoPerson InfoPerson;
-	cout << "Please insert your Age: ";
-	cin >> InfoPerson.Age;
-	cout << "Do you have a driver License (1 or 0) ?  ";
-	cin >> InfoPerson.HasDriverLicense;
-	return InfoPerson;
-}
 
-bool CheckResult(strInfoPerson InfoPerson) {
-	return  bool(InfoPerson.Age >=21 && InfoPerson.HasDriverLicense);
-}
-
-void PrintResult(strInfoPerson InfoPerson) {
-	if (CheckResult(InfoPerson) == 1)
-		cout << "Accepted";
-	else
-		cout << "Rejected";
+strInfoPerson ReadFullName() {
+	strInfoPerson PersonInfo;
+	cout << "Type your First Name: " << endl;
+	getline(cin, PersonInfo.FirstName);
+	cout << "Type your Last Name: " << endl;
+	getline(cin, PersonInfo.LastName);
+	return PersonInfo;
 }
 
 
+string WriteFullname(strInfoPerson PersonInfo, bool reversed) {
+	string FullName;
+	if (reversed)
+		return FullName = PersonInfo.LastName + " " + PersonInfo.FirstName;
+	else 
+		return FullName = PersonInfo.FirstName + " " + PersonInfo.LastName;
+			
+}
+
+void printFullName(string FullName) {
+	cout << FullName;
+}
 
 
 
 int main() {
 	
-	PrintResult(ReadInfo());
+	printFullName(WriteFullname(ReadFullName(), true));
 }
