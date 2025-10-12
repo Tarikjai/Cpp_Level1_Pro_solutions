@@ -176,6 +176,39 @@
     <ClCompile Include="Problem_09.cpp">
       <Filter>Pro_Confirmation</Filter>
     </ClCompile>
+    <ClCompile Include="Problem_010.cpp">
+      <Filter>Pro_Confirmation</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_011.cpp">
+      <Filter>Pro_Confirmation</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_012.cpp">
+      <Filter>Pro_Confirmation</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_013.cpp">
+      <Filter>Pro_Confirmation</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_014.cpp">
+      <Filter>Pro_Confirmation</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_015.cpp">
+      <Filter>Pro_Confirmation</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_016.cpp">
+      <Filter>Pro_Confirmation</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_017.cpp">
+      <Filter>Pro_Confirmation</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_018.cpp">
+      <Filter>Pro_Confirmation</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_019.cpp">
+      <Filter>Pro_Confirmation</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_020.cpp">
+      <Filter>Pro_Confirmation</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Pro_Solutions">

@@ -2,17 +2,27 @@
 #include <string>
 using namespace std;
 
-
-int ReadNumber() {
-	int Number1, Number2, Number3;
-	cout << "Please type number1:" << endl;
-	cin >> Number1;
-	cout << "Please type number2:" << endl;
-	cin >> Number2;
-	cout << "Please type number3:" << endl;
-	cin >> Number3;
+void ReadInput(float& A, float& B){
+	cout << "Please enter the a: " << endl;
+	cin >> A;
+	cout << "Please enter the b: " << endl;
+	cin >> B;
 }
 
-int main() {
+float RectangleArea(float A, float B)
+{
+	return A * B;
+}
 
+void printResult(float result)
+{
+	cout << result << endl;
+	
+}
+
+int main()
+{
+	float A, B;
+	ReadInput(A, B);
+	printResult(RectangleArea( A,  B));
 }
