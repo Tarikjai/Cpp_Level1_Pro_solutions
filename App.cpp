@@ -3,25 +3,16 @@
 using namespace std;
 
 
-int readNumber() {
-	int Number;
-	do {
-		cout << "Insert a positive number" << endl;
-		cin >> Number;
-	} while (Number <= 0);
-	return Number;	
+int ReadNumber() {
+	int Number1, Number2, Number3;
+	cout << "Please type number1:" << endl;
+	cin >> Number1;
+	cout << "Please type number2:" << endl;
+	cin >> Number2;
+	cout << "Please type number3:" << endl;
+	cin >> Number3;
 }
 
-float divideNumber(int Number) {
-	return (float)Number / 2;
-}
-
- 
-
-void printResult(int Number) {
-	cout <<   "Half of " + to_string(Number) + " is " + to_string(divideNumber(Number));;
-}
 int main() {
 
-	printResult(readNumber());
 }
