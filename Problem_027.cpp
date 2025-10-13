@@ -27,7 +27,7 @@ void doWhile(int number) {
 		i--;
 	} while (i >= 1);
 	cout << endl;
-}
+} 
 
 void whileLoops(int number) {
 	int i = number;
