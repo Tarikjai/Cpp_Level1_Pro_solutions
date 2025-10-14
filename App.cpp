@@ -11,6 +11,20 @@ int readNumber() {
 	return Number;
 }
 
-int main() {
 
+
+int factorial(int Number) {
+	int output=1;
+	for (int i = Number; i >= 1; i--) {
+		output *= i;
+	}
+	return output;
+}
+
+void printResult(int output) {
+	cout << output << endl;
+}
+int main() {
+	int Number = readNumber();
+	printResult(factorial(Number));
 }
