@@ -19,7 +19,6 @@ int sumNumbers(int N)
 	for (int i = N; i >= 1; i--)
 	{
 		sum *= i;
-
 	}
 	return sum;
 }
