@@ -28,6 +28,7 @@ void printResult(int sum)
 	cout << sum;
 }
 
+
 int main()
 {
 
