@@ -2,27 +2,24 @@
 #include <string>
 using namespace std;
 
-
-int readr()
-{
-	int N;
-	cout << "Please enter N: " << endl;
-	cin >> N;
-	return N;
+int readNumber() {
+	int Number;
+	do {
+		cout << "Please insert a number: " << endl;
+		cin >> Number;
+	} while (Number <= 0);
+	return Number;
 }
 
-void Outputs(int N)
-{
-	cout << pow(N, 2) << endl;
-	cout << pow(N, 3) << endl;
-	cout << pow(N, 4) << endl;
+void print(int Number) {
+	int a, b, c;
+	a = Number * Number;
+	b = Number * Number * Number;
+	c = Number * Number * Number * Number;
+	cout << a << " " << b << " " << c << endl;
 }
 
 
-
-int main()
-{
-
-
-	Outputs(readr());
+int main() {
+	print(readNumber());
 }

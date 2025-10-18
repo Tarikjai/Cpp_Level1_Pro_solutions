@@ -5,26 +5,21 @@ using namespace std;
 int readNumber() {
 	int Number;
 	do {
-		cout << "Please insert a number:" << endl;
+		cout << "Please insert a number: " << endl;
 		cin >> Number;
 	} while (Number <= 0);
 	return Number;
 }
 
+void print(int Number) {
+	int a, b, c;
+	a = Number * Number;
+	b = Number * Number * Number;
+	c = Number * Number * Number * Number;	 
+	cout << a << " " << b << " " << c << endl;
+} 
 
 
-int factorial(int Number) {
-	int output=1;
-	for (int i = Number; i >= 1; i--) {
-		output *= i;
-	}
-	return output;
-}
-
-void printResult(int output) {
-	cout << output << endl;
-}
 int main() {
-	int Number = readNumber();
-	printResult(factorial(Number));
+	print(readNumber());
 }
