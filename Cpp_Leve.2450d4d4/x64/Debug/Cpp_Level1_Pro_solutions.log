@@ -1,2 +1,9 @@
 ﻿  App.cpp
+C:\Users\Professional\Documents\C++\Cpp_Level1_Pro_solutions\App.cpp(17,12): warning C4305: 'return': truncation from 'double' to 'float'
+C:\Users\Professional\Documents\C++\Cpp_Level1_Pro_solutions\App.cpp(19,12): warning C4305: 'return': truncation from 'double' to 'float'
+C:\Users\Professional\Documents\C++\Cpp_Level1_Pro_solutions\App.cpp(21,12): warning C4305: 'return': truncation from 'double' to 'float'
+C:\Users\Professional\Documents\C++\Cpp_Level1_Pro_solutions\App.cpp(23,12): warning C4305: 'return': truncation from 'double' to 'float'
+C:\Users\Professional\Documents\C++\Cpp_Level1_Pro_solutions\App.cpp(36,17): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Professional\Documents\C++\Cpp_Level1_Pro_solutions\App.cpp(38,43): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Professional\Documents\C++\Cpp_Level1_Pro_solutions\App.cpp(39,51): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
   Cpp_Level1_Pro_solutions.vcxproj -> C:\Users\Professional\Documents\C++\Cpp_Level1_Pro_solutions\x64\Debug\Cpp_Level1_Pro_solutions.exe

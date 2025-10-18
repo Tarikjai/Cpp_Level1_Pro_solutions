@@ -30,11 +30,11 @@ float calculateCommision(float TotalSales) {
 	return percentage(TotalSales) * TotalSales;
 }
 
- 
+
 
 int main() {
 	int TotalSales = readTotalSales();
 
-	cout << "Percentage is : " << percentage(TotalSales) <<endl;
- 	cout << "Commision is : " << calculateCommision(TotalSales);
+	cout << "Percentage is : " << percentage(TotalSales) << endl;
+	cout << "Commision is : " << calculateCommision(TotalSales);
 }
