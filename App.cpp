@@ -1,40 +1,53 @@
 #include <iostream>
+#include <ctime>
 #include <string>
 using namespace std;
 
-float readTotalSales() {
-	float TotalSales;
-	do {
-		cout << "Please enter Mark: " << endl;
-		cin >> TotalSales;
-	} while (TotalSales <= 0);
-	return TotalSales;
+
+enum enOperation { ADD = '+', SUBSTRUCT = '-' , MULTIPLY = '*' , DIVIDE = '/' };
+
+
+float readNumber() {
+	float Number;
+	cout << "Please insert a number: " << endl;
+	cin >> Number;
+	return Number;
 }
 
-float percentage(float TotalSales) {
-
-	if (TotalSales >= 1000000)
-		return   0.01;
-	else if (TotalSales >= 500000)
-		return   0.02;
-	else if (TotalSales >= 100000)
-		return   0.03;
-	else if (TotalSales >= 50000)
-		return   0.05;
-	else
-		return 0;
-
+enOperation readOperationType() {
+	char operationType;
+	cout << "Please insert the OperationType: " << endl;
+	cin >> operationType;
+	return (enOperation)operationType;
 }
 
-float calculateCommision(float TotalSales) {
-	return percentage(TotalSales) * TotalSales;
+
+float function(float Number1, float Number2, enOperation operationType) {
+
+	switch (operationType) {
+	case enOperation::ADD:
+		return Number1 + Number2;
+		break;
+	case enOperation::SUBSTRUCT:
+		return Number1 - Number2;
+		break;
+	case enOperation::MULTIPLY:
+		return Number1 * Number2;
+		break;
+	case enOperation::DIVIDE:
+		return Number1 / Number2;
+		break;
+	 }
+		 
 }
 
- 
 
 int main() {
-	int TotalSales = readTotalSales();
+	float Number1 = readNumber();
+	float Number2 = readNumber();
 
-	cout << "Percentage is : " << percentage(TotalSales) <<endl;
- 	cout << "Commision is : " << calculateCommision(TotalSales);
+	enOperation ope = readOperationType();
+
+	cout << function(Number1, Number2,  ope );
+
 }
