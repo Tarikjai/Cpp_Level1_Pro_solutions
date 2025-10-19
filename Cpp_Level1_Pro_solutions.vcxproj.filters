@@ -239,6 +239,12 @@
     <ClCompile Include="Problem_037.cpp">
       <Filter>Pro_Confirmation</Filter>
     </ClCompile>
+    <ClCompile Include="Problem_038.cpp">
+      <Filter>Pro_Confirmation</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem_039.cpp">
+      <Filter>Pro_Confirmation</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Pro_Solutions">

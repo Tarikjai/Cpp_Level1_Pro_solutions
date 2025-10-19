@@ -3,42 +3,31 @@
 #include <string>
 using namespace std;
 
-enum CheckPrime { Prime=1, NotPrime=2 };
 
-
-int readNumber()  {
-	int Number;
+float readinput(string Message)  {
+	float TotalBill;
 	do {
-		cout << "Please enter a positive Number: " << endl;
-		cin >> Number;
-	} while (Number <= 0);
-	return Number;
+		cout << Message << endl;
+		cin >> TotalBill;
+	} while (TotalBill <= 0);
+	return TotalBill;
 }
 
-CheckPrime checkNumber(int Number) {
-	int M = round(Number / 2);
+float servicesfee(float TotalBill) {
+	TotalBill = TotalBill * 1.1;
+	TotalBill = TotalBill  * 1.16;
 
-	for (int counter = 2; counter <= M; counter++) {
-		if (Number % counter == 0)
-			return CheckPrime::NotPrime;
-		else
-			return CheckPrime::Prime;
-	}
-}
-
-void printResult(int Number) {
-	
-	if ( checkNumber(Number) == CheckPrime::Prime)
-		cout << "Prime";
-	else  
-		cout << "Not Prime";
-}
-
-
+	return  TotalBill;
+ }
+ 
 
  
 
 int main() {
-	
-	printResult(readNumber());
+	float TotalBill = readinput("Please insert the Bill Value: ");
+	cout << "Total bill: " << TotalBill << endl;
+
+	cout << servicesfee(TotalBill) ;
+ 
+	  
 }
