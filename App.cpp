@@ -4,50 +4,37 @@
 using namespace std;
 
 
-enum enOperation { ADD = '+', SUBSTRUCT = '-' , MULTIPLY = '*' , DIVIDE = '/' };
 
+int readNumber(string Message) {
+	int input;
+	
+	cout << Message << endl;
+	cin >> input;
 
-float readNumber() {
-	float Number;
-	cout << "Please insert a number: " << endl;
-	cin >> Number;
-	return Number;
-}
-
-enOperation readOperationType() {
-	char operationType;
-	cout << "Please insert the OperationType: " << endl;
-	cin >> operationType;
-	return (enOperation)operationType;
+	return input;
 }
 
 
-float function(float Number1, float Number2, enOperation operationType) {
+int sumFunction() {
+	int Number = 0; int sum = 0; int counter = 1;
+	do {
+		if (Number == -99) {
+			break;
+		}
+		sum += Number;
+		Number = readNumber("Please insert the number " + to_string(counter));
+		counter++;
+	} while (Number != -99);
+	
+	return sum;
+}
 
-	switch (operationType) {
-	case enOperation::ADD:
-		return Number1 + Number2;
-		break;
-	case enOperation::SUBSTRUCT:
-		return Number1 - Number2;
-		break;
-	case enOperation::MULTIPLY:
-		return Number1 * Number2;
-		break;
-	case enOperation::DIVIDE:
-		return Number1 / Number2;
-		break;
-	 }
-		 
+void printSum(int sum) {
+	cout << sum;
 }
 
 
 int main() {
-	float Number1 = readNumber();
-	float Number2 = readNumber();
-
-	enOperation ope = readOperationType();
-
-	cout << function(Number1, Number2,  ope );
+	printSum(sumFunction());
 
 }
