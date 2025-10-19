@@ -3,8 +3,6 @@
 #include <string>
 using namespace std;
 
-
-
 int readNumber(string Message) {
 	int input;
 
@@ -13,7 +11,6 @@ int readNumber(string Message) {
 
 	return input;
 }
-
 
 int sumFunction() {
 	int Number = 0; int sum = 0; int counter = 1;
@@ -32,7 +29,6 @@ int sumFunction() {
 void printSum(int sum) {
 	cout << sum;
 }
-
 
 int main() {
 	printSum(sumFunction());

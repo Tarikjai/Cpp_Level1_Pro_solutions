@@ -3,7 +3,7 @@
 #include <string>
 using namespace std;
 
-float readNumberOfHours(string Message)  {
+float readNumberOfHours(string Message) {
 	float NumberOfHours;
 	do {
 		cout << Message << endl;
@@ -14,10 +14,10 @@ float readNumberOfHours(string Message)  {
 
 
 float CalculateDays(float NumberOfHours) {
-	float Days = NumberOfHours / 24 ;
+	float Days = NumberOfHours / 24;
 	return  Days;
- }
- 
+}
+
 float CalculateWeaks(float NumberOfHours) {
 	float Weaks = (NumberOfHours / 24) / 7;
 	return  Weaks;
@@ -26,7 +26,7 @@ float CalculateWeaks(float NumberOfHours) {
 
 int main() {
 	float NumberOfHours = readNumberOfHours("Please insert the Number O fHours: ");
-	 
-	cout << CalculateWeaks(NumberOfHours) << " Weeks" << endl; 
+
+	cout << CalculateWeaks(NumberOfHours) << " Weeks" << endl;
 	cout << CalculateDays(NumberOfHours) << " Days" << endl;
 }
