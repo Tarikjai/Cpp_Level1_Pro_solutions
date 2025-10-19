@@ -3,38 +3,42 @@
 #include <string>
 using namespace std;
 
+enum CheckPrime { Prime=1, NotPrime=2 };
 
 
-int readNumber(string Message) {
-	int input;
-	
-	cout << Message << endl;
-	cin >> input;
-
-	return input;
-}
-
-
-int sumFunction() {
-	int Number = 0; int sum = 0; int counter = 1;
+int readNumber()  {
+	int Number;
 	do {
-		if (Number == -99) {
-			break;
-		}
-		sum += Number;
-		Number = readNumber("Please insert the number " + to_string(counter));
-		counter++;
-	} while (Number != -99);
+		cout << "Please enter a positive Number: " << endl;
+		cin >> Number;
+	} while (Number <= 0);
+	return Number;
+}
+
+CheckPrime checkNumber(int Number) {
+	int M = round(Number / 2);
+
+	for (int counter = 2; counter <= M; counter++) {
+		if (Number % counter == 0)
+			return CheckPrime::NotPrime;
+		else
+			return CheckPrime::Prime;
+	}
+}
+
+void printResult(int Number) {
 	
-	return sum;
+	if ( checkNumber(Number) == CheckPrime::Prime)
+		cout << "Prime";
+	else  
+		cout << "Not Prime";
 }
 
-void printSum(int sum) {
-	cout << sum;
-}
 
+
+ 
 
 int main() {
-	printSum(sumFunction());
-
+	
+	printResult(readNumber());
 }
