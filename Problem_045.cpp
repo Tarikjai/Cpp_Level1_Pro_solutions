@@ -19,7 +19,7 @@ enum enMonths {
 };
 
 int readMonth(string Message, int From, int To) {
-    int Month=0;
+    int Month = 0;
     do {
         cout << Message << endl;
         cin >> Month;
@@ -27,8 +27,10 @@ int readMonth(string Message, int From, int To) {
     return Month;
 }
 
+
+
 enMonths CheckMonth() {
-    return (enMonths)readMonth("Please type a Number 1 - 12",1,12);
+    return (enMonths)readMonth("Please type a Number 1 - 12", 1, 12);
 }
 
 string print(enMonths Month) {

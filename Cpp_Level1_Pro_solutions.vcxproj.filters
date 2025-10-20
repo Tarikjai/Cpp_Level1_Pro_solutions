@@ -260,6 +260,9 @@
     <ClCompile Include="Problem_044.cpp">
       <Filter>Pro_Confirmation</Filter>
     </ClCompile>
+    <ClCompile Include="Problem_045.cpp">
+      <Filter>Pro_Confirmation</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Pro_Solutions">
