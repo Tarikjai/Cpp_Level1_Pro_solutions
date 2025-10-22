@@ -111,7 +111,6 @@ void ReadInput() {
         cout << "Alright, maybe later." << endl;
     }
 }
-
 int main() {
     ReadInput();
     return 0;
