@@ -3,28 +3,35 @@
 #include <string>
 using namespace std;
 
- 
-float ReadInput(string Message) {
-	float input=0;
-	do {
-		cout << Message << endl;
-		cin >> input;
-	} while (input <= 0);
-	return input;
-};
-
-float calculate(float LA, float MP) {
-	return LA / MP;
+string readPIN(string Message) {
+	string Input;
+	cout << Message << endl;
+	cin >> Input;
+	return Input;
 }
+ 
 
-void PrintResult(float result) {
-	cout << result << " Months";
+bool CheckAccount() {
+	string PinCode;
+	do {
+		PinCode = readPIN("Please Insert Your PIN: ");
+		if (PinCode == "1234")
+			return 1;
+		else 
+			system("color 4f");
+			cout << "Wrong Number" << endl;
+			cout << endl;
+
+	} while (PinCode != "1234");
 }
 
 int main() {
-
-	float LA = ReadInput("Please Enter the Loan Amount");
-	float MP = ReadInput("Please Enter the Monthly Payment");
-
-	PrintResult(calculate(LA, MP));
+	if (CheckAccount()) {
+		return system("color 2A");
+		cout << "Your Balance is : 7500";
+	}
 }
+
+//
+//
+//system("color 2A");

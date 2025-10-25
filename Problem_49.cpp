@@ -18,11 +18,10 @@ bool Login() {
 			return 1;
 		}
 		else {
+			return 0;
 			system("color 4F");
 		}
-
 	} while (PIN != "1234");
-
 }
 
 int main() {
