@@ -3,35 +3,46 @@
 #include <string>
 using namespace std;
 
-string readPIN(string Message) {
-	string Input;
-	cout << Message << endl;
-	cin >> Input;
-	return Input;
+void PrintTableHeader() {
+    cout << "\t \t \t  Multiplication table from 1 to 10\t \t \t " << endl;
+    cout << endl;
+
+    for (int i = 1; i <= 10; i++) {
+        cout << "\t" << i ;
+    }
+    cout << endl;
+   
+
+    for (int i = 1; i <= 90; i++) {
+        cout << "-" ;
+    }
+    cout << endl;
 }
  
-
-bool CheckAccount() {
-	string PinCode;
-	do {
-		PinCode = readPIN("Please Insert Your PIN: ");
-		if (PinCode == "1234")
-			return 1;
-		else 
-			system("color 4f");
-			cout << "Wrong Number" << endl;
-			cout << endl;
-
-	} while (PinCode != "1234");
+string ColumnSeparator(int i) {
+        if (i < 10)
+            return  "    |";
+        else
+            return  "   |";
 }
 
+void MultiplicationTable() {
+     
+    for (int i = 1; i <= 10;i++) {
+        cout << " " << i << ColumnSeparator(i)<< "\t";
+        for (int j = 1; j <= 10;j++) {
+            cout << i * j << "\t";
+        }
+      
+        cout << endl;
+    }
+    cout << endl;
+
+
+}
+
+ 
 int main() {
-	if (CheckAccount()) {
-		return system("color 2A");
-		cout << "Your Balance is : 7500";
-	}
+    PrintTableHeader();
+    MultiplicationTable();
 }
-
-//
-//
-//system("color 2A");
