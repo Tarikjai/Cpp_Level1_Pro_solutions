@@ -1,7 +1,9 @@
 #include <iostream>
 #include <ctime>
 #include <string>
+
 using namespace std;
+
 
 void PrintTableHeader() {
     cout << "\t \t \t  Multiplication table from 1 to 10\t \t \t " << endl;
@@ -25,6 +27,7 @@ string ColumnSeparator(int i) {
         else
             return  "   |";
 }
+
 
 void MultiplicationTable() {
      
