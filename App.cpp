@@ -4,7 +4,6 @@
 
 using namespace std;
 
-
 void PrintTableHeader() {
     cout << "\t \t \t  Multiplication table from 1 to 10\t \t \t " << endl;
     cout << endl;
